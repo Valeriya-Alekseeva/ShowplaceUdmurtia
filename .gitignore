@@ -1,2 +1,6 @@
-/.idea
+/.idea/
+/markup/node_modules/
+/markup/bower_components/
+/markup/.sass-cache/
+/markup/build/
 /robots.txt
