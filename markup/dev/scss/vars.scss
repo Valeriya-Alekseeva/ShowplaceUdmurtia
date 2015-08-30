@@ -1,22 +1,26 @@
 // default
 $color--default-white: #fff;
 $color--default-black: #000;
+$color--primary: #4b1c04;
 
 // bg
 $color--bg-primary: #f2f2f2;
 $color--bg-additional--blue: #1351bc;
 
 // text
-$color--text-primary: #000;
-$color--text-additional--blue: #1351bc;
+$color--text-primary: #4b1c04;
+$color--text-hover: #780303;
 
 // border
 $color--border-primary: #e1e1e1;
 $color--border-additional--blue: #1351bc;
 
 // viewports
+$screen-mobile-sm: 320px;
+$screen-mobile: 480px;
 $screen-sm: 768px;
 $screen-md: 990px;
+$screen-big: 1200px;
 
 @mixin clearfix {
     &::after {
@@ -28,13 +32,25 @@ $screen-md: 990px;
 
 @mixin adaptive($point) {
 
+    $adaptive-mobile-sm: "(min-width: " + $screen-mobile-sm + ")";
+    $adaptive-mobile: "(min-width: " + $screen-mobile + ")";
     $adaptive-sm: "(min-width: " + $screen-sm + ")";
     $adaptive-md: "(min-width: " + $screen-md + ")";
+    $adaptive-big: "(min-width: " + $screen-big + ")";
 
+    @if $point == mobile-sm {
+        @media #{$adaptive-mobile-sm} { @content; }
+    }
+    @if $point == mobile {
+        @media #{$adaptive-mobile} { @content; }
+    }
     @if $point == sm {
         @media #{$adaptive-sm} { @content; }
     }
-    @else if $point == md {
+    @if $point == md {
         @media #{$adaptive-md} { @content; }
+    }
+    @if $point == big {
+        @media #{$adaptive-big} { @content; }
     }
 }

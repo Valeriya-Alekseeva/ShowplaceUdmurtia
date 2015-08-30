@@ -1,0 +1,91 @@
+.main-menu{
+    &__button{
+        position: absolute;
+        z-index: 15;
+
+        @include adaptive(big){
+            top: 30px;
+            right: 30px;
+        }
+    }
+
+    &__container{
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        position: absolute;
+        right: 0;
+        transition: right  1s;
+        background: url('../img/bg-pattern.jpg') repeat;
+        opacity: 0;
+        z-index: 4;
+
+        .desktop &{
+            transition: all 0.5s;
+        }
+
+        &.active{
+            opacity: 1;
+            z-index: 10;
+        }
+    }
+
+    &__list{
+        display: block;
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform:translate(-50%, -50%);
+        -moz-transform:translate(-50%, -50%);
+        -ms-transform:translate(-50%, -50%);
+        -o-transform:translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    &__item{
+        text-align: center;
+        @include adaptive(big){
+            margin: 0 20px 45px;
+        }
+
+        .desktop &{
+
+
+            &:hover{
+                .main-menu__link{
+                    color: $color--text-hover;
+                }
+            }
+
+        }
+    }
+    
+    &__link{
+        font-family: $font--veles;
+        font-weight: 700;
+        color: $color--text-primary;
+        @include adaptive(big){
+            font-size: 83px;
+            line-height: 100px;
+        }
+
+        &:hover{
+            transition: color .3s;
+        }
+
+    }
+
+    &__desc{
+        font-weight: 700;
+        display: none;
+
+        @include adaptive(big){
+            font-size: 31px;
+            line-height: 37px;
+            padding: 55px 0 0;
+        }
+    }
+}
