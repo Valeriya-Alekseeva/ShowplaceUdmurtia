@@ -21,6 +21,7 @@ $screen-mobile: 480px;
 $screen-sm: 768px;
 $screen-md: 990px;
 $screen-big: 1200px;
+$screen-wide: 1400px;
 
 @mixin clearfix {
     &::after {
@@ -37,6 +38,7 @@ $screen-big: 1200px;
     $adaptive-sm: "(min-width: " + $screen-sm + ")";
     $adaptive-md: "(min-width: " + $screen-md + ")";
     $adaptive-big: "(min-width: " + $screen-big + ")";
+    $adaptive-wide: "(min-width: " + $screen-wide + ")";
 
     @if $point == mobile-sm {
         @media #{$adaptive-mobile-sm} { @content; }
@@ -52,5 +54,8 @@ $screen-big: 1200px;
     }
     @if $point == big {
         @media #{$adaptive-big} { @content; }
+    }
+    @if $point == wide {
+        @media #{$adaptive-wide} { @content; }
     }
 }
