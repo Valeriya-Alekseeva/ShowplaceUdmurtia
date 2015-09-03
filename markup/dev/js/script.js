@@ -52,6 +52,7 @@
 
     showMenuButton.on('click', function(){
         mainMenuContainer.toggleClass("active");
+        bodyContainer.toggleClass("menu-open");
     });
 
 

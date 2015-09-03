@@ -9,6 +9,10 @@
             top: 30px;
             right: 30px;
         }
+
+        .desktop &{
+            position: fixed;
+        }
     }
 
     &__container{
@@ -24,6 +28,7 @@
 
         .desktop &{
             transition: all 1s;
+            position: fixed;
         }
 
         &.active{
