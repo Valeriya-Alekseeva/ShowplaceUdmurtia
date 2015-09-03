@@ -2,15 +2,24 @@
     &-logo{
         display: block;
         opacity: 0.7;
+        width: 30px;
+        height: 30px;
+        background: none;
+        padding: 0;
+
+        svg{
+            fill: $color--primary;
+        }
+
+
+        @include adaptive(sm){
+            width: 70px;
+            height: 70px;
+        }
 
         @include adaptive(big){
             width: 115px;
             height: 115px;
-            padding: 0;
-            background: none;
-            svg{
-                fill: $color--primary;
-            }
         }
 
         .desktop &{

@@ -3,7 +3,8 @@
         mainMenuContainer = $("#main-menu-js"),
         mainMenuLinks = mainMenuContainer.find(".main-menu__item"),
         showMenuButton = $("#show-menu-js"),
-        menuAnimationOn = true;
+        menuAnimationOn = true,
+        mainPageCover = $("#main-page-cover");
 
     var isMobile = {
         Android: function() {
@@ -27,42 +28,44 @@
     };
 
     if(isMobile.any()){
-        bodyContainer.addClass('mobile')
+        bodyContainer.addClass('mobile');
     }else{
-        bodyContainer.addClass('desktop')
+        bodyContainer.addClass('desktop');
+        mainMenuLinks.hover(function(){
+                var currentDesc = $(this).children(".main-menu__desc");
+
+                currentDesc.slideDown(300, function(){
+                    menuAnimationOn = true;
+                });
+
+
+            }
+            ,function(){
+                var currentDesc = $(this).children(".main-menu__desc");
+                currentDesc.slideUp(300, function(){
+                    menuAnimationOn = true;
+                });
+
+            }
+        );
     }
 
     showMenuButton.on('click', function(){
         mainMenuContainer.toggleClass("active");
     });
 
-    mainMenuLinks.hover(function(){
-            var currentDesc = $(this).children(".main-menu__desc");
-            console.log(menuAnimationOn);
-            currentDesc.slideDown(300, function(){
-                menuAnimationOn = true;
-            });
-            //if(menuAnimationOn){
-            //    menuAnimationOn = false;
-            //    currentDesc.slideDown(300, function(){
-            //        menuAnimationOn = true;
-            //    });
-            //}
 
-        }
-        ,function(){
-            var currentDesc = $(this).children(".main-menu__desc");
-            currentDesc.slideUp(300, function(){
-                menuAnimationOn = true;
-            });
-            //if(menuAnimationOn){
-            //    menuAnimationOn = false;
-            //    currentDesc.slideUp(300, function(){
-            //        menuAnimationOn = true;
-            //    });
-            //}
-        }
-    );
+
+
+    if(mainPageCover.length > 0){
+        setTimeout(function(){
+            mainPageCover.addClass("disabled");
+        }, 2000);
+        setTimeout(function(){
+            mainMenuContainer.addClass("active");
+            mainPageCover.hide();
+        },3000);
+    }
 
 
 }(window, window.jQuery));

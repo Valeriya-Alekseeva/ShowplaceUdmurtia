@@ -2,8 +2,10 @@
     &__button{
         position: absolute;
         z-index: 15;
+        top: 0;
+        right: 0;
 
-        @include adaptive(big){
+        @include adaptive(sm){
             top: 30px;
             right: 30px;
         }
@@ -34,18 +36,32 @@
         display: block;
         width: 100%;
         max-width: 1000px;
-        margin: 100px auto 0;
+        margin: 50px auto 0;
+
+        @include adaptive(sm){
+            margin: 100px auto 0;
+        }
     }
 
     &__item{
         text-align: center;
+        margin: 0 20px 30px;
+
+
         @include adaptive(big){
             margin: 0 20px 45px;
         }
 
+        &.active{
+            .main-menu__link{
+                color: $color--text-hover;
+            }
+            .main-menu__desc{
+                display: block;
+            }
+        }
+
         .desktop &{
-
-
             &:hover{
                 .main-menu__link{
                     color: $color--text-hover;
@@ -59,20 +75,37 @@
         font-family: $font--veles;
         font-weight: 700;
         color: $color--text-primary;
+        font-size: 24px;
+
+        @include adaptive(sm){
+            font-size: 42px;
+        }
+
+
         @include adaptive(big){
             font-size: 83px;
             line-height: 100px;
         }
 
-        &:hover{
-            transition: color .3s;
+        .desktop &{
+            &:hover{
+                transition: color .3s;
+            }
         }
+
 
     }
 
     &__desc{
         font-weight: 700;
         display: none;
+        font-size: 16px;
+        padding: 15px 0 0;
+
+        @include adaptive(sm){
+            font-size: 24px;
+            padding: 30px 0 0;
+        }
 
         @include adaptive(big){
             font-size: 31px;
