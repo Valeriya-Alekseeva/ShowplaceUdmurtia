@@ -1,5 +1,5 @@
 {
   "src": "./dev",
   "dest": "./build",
-  "backendResourcesPath": "./path-to-build-folder"
+  "backendResourcesPath": "../wp-content/themes/showplace/resources"
 }
