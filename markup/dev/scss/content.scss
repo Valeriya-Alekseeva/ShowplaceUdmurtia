@@ -11,3 +11,70 @@ a,button{
         outline: none;
     }
 }
+
+.text{
+    &-bold{
+        font-weight: 700;    
+    }
+    &-reg{
+        font-weight: 400;
+    }
+    &-title{
+        font-family: $font--veles;
+        font-weight: 700;
+        margin: 40px 0;
+        font-size: 40px;
+
+        @include adaptive(sm){
+            margin: 70px 0;
+            font-size: 80px;
+        }
+
+        @include adaptive(md){
+            font-size: 100px;
+        }
+    }
+
+    &-subtitle{
+        font-weight: 700;
+        font-size: 20px;
+        margin: 40px 0 15px;
+
+        @include adaptive(sm){
+            font-size: 31px;
+            line-height: 38px;
+            margin: 60px 0 20px;
+        }
+    }
+    &-paragraph{
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 10px;
+
+        @include adaptive(sm){
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 15px;
+        }
+    }
+    &-link{
+        font-size: 16px;
+        line-height: 20px;
+        text-decoration: underline;
+        font-weight: 700;
+        color: $color--text-primary;
+
+        @include adaptive(sm){
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        .desktop &{
+            transition: all 0.3s;
+            &:hover{
+                text-decoration: none;
+                color: $color--text-hover;
+            }
+        }
+    }
+}

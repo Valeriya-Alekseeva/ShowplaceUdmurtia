@@ -2,8 +2,10 @@
     &__button{
         position: absolute;
         z-index: 15;
-        top: 0;
+        top: 10px;
         right: 0;
+
+
 
         @include adaptive(sm){
             top: 30px;

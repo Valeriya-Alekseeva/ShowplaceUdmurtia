@@ -11,6 +11,10 @@
             fill: $color--primary;
         }
 
+        @include adaptive(mobile){
+            width: 40px;
+            height: 40px;
+        }
 
         @include adaptive(sm){
             width: 70px;
