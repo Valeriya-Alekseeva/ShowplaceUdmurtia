@@ -1,0 +1,105 @@
+.form{
+    &__container{
+        width: 100%;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+
+    &__block{
+        margin-bottom: 15px;
+
+    }
+
+    &__field{
+        width: 100%;
+        height: 48px;
+        box-sizing: border-box;
+        border: 4px solid $color--primary;
+        color: $color--primary;
+        border-radius: 4px;
+        background: none;
+        font-size: 20px;
+        line-height: 20px;
+        padding: 10px 12px;
+
+        &::-webkit-input-placeholder{
+            font-size: 20px;
+            line-height: 20px;
+            color: $color--inactive;
+        }
+        &:-moz-placeholder{
+            font-size: 20px;
+            line-height: 20px;
+            color: $color--inactive;
+        }
+        &:-ms-input-placeholder{
+            font-size: 20px;
+            line-height: 20px;
+            color: $color--inactive;
+        }
+
+        &:focus{
+            outline: none;
+        }
+        
+        
+        &--textarea{
+            height: 130px;
+            resize: none;
+            border-color: $color--inactive;
+            &::-webkit-input-placeholder{
+                color: $color--primary;
+            }
+            &:-moz-placeholder{
+                color: $color--primary;
+            }
+            &:-ms-input-placeholder{
+                color: $color--primary;
+            }
+        }
+
+    }
+
+    &__button{
+        display: block;
+        width: 100%;
+        height: 40px;
+        box-sizing: border-box;
+        border-radius: 6px;
+        background: $color--primary;
+        font-size: 20px;
+        line-height: 20px;
+        padding: 10px;
+        color: #d1bd9f;
+
+        &--submit{
+            height: 72px;
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            background: rgba(75, 28, 4, 0.3);
+
+            .desktop &{
+                transition: all .7s;
+                &:hover{
+                    background: rgba(75, 28, 4, 1);
+                }
+            }
+        }
+
+    }
+
+    &__file-block{
+        position: relative;
+        display: block;
+    }
+
+    &__file{
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }
+
+}

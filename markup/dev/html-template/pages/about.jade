@@ -76,4 +76,18 @@ block content
                 |Если вам есть чем поделиться с&nbsp;мировой общественностью в плане неуказанных нами достопримечательностей или красивыми фотография всего добра Удмуртии (сделанными вами лично), мы с&nbsp;удовольствием примем это в&nbsp;дар.
             p
                 |Если вы&nbsp;нашли какую-то неточность или хотите сказать нам пару приятных слов, воспользуйтесь формой:
-            
+            form.about__form.form__container(id="form-contact")
+                div.form__block
+                    input.form__field.form__field--text(type="text" placeholder="Как к вам обращаться")
+                div.form__block
+                    input.form__field.form__field--text(type="text" placeholder="Как с вами связаться")
+                div.form__block
+                    textarea.form__field.form__field--textarea(placeholder="Ваше сообщение")
+                div.form__block
+                    label.form__button.form__file-block
+                        |Прикрепить файл
+                        input.form__file(type="file")
+
+                button.form__button.form__button--submit(type="submit")
+                    |Отправить
+
