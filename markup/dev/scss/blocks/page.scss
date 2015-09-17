@@ -2,7 +2,7 @@
     max-width: $width--wrapper;
     margin: 0 30px;
 
-    *:last-child{
+    >*:last-child{
         margin-bottom: 50px;
 
         //@include adaptive(sm){
@@ -35,6 +35,9 @@
 
     h2{
         @extend .text-subtitle;
+    }
+    h3{
+        @extend .text-paragraph-title;
     }
     p{
         @extend .text-paragraph;

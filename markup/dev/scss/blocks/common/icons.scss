@@ -48,4 +48,39 @@
 
     }
 
+    &-tomato{
+        max-width: 120px;
+        height: auto;
+    }
+
+    &-croc{
+        max-width: 180px;
+        height: auto;
+    }
+
+    &-fork{
+        max-width: 70px;
+        height: auto;
+    }
+
+    &-ufo{
+        display: block;
+        width: 95px;
+    }
+
+    &-hat{
+        display: block;
+        width: 100px;
+    }
+    
+    &-dino{
+        display: block;
+        width: 195px;
+    }
+    
+    &-music{
+        display: block;
+        width: 140px;
+    }
+
 }

@@ -1,0 +1,43 @@
+.page--about{
+    .columns-block{
+        margin-top: 50px;
+    }
+
+    .icon-ufo{
+        margin: 20px auto 0;
+    }
+
+
+
+    .about{
+        &__block{
+            margin-bottom: 20px;
+            position: relative;
+
+        }
+
+        &__icon{
+            display: none;
+
+            @include adaptive(big){
+                display: block;
+                position: absolute;
+            }
+
+            &--hat{
+                top: 0;
+                left: 100%;
+            }
+            &--dino{
+                top: -55px;
+                right: 100%;
+            }
+
+            &--music{
+                top: -50px;
+                left: 100%;
+            }
+        }
+    }
+
+}
