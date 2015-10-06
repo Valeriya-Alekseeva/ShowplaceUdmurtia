@@ -1,0 +1,18 @@
+extends ./../layouts/layout
+block content
+    div.page.page--our-all
+        div.page__content
+            h1
+                |Наше всё
+            div.content-filter
+                div.content-filter__menu
+                    a.content-filter__menu-item.active(href="#" data-type='all')
+                        |Всё
+                    a.content-filter__menu-item(href="#" data-type='myth')
+                        |Мифология
+                    a.content-filter__menu-item(href="#" data-type='eat')
+                        |Еда
+                    a.content-filter__menu-item(href="#" data-type='museum')
+                        |Музеи
+                div.content-filter__content(data-type='all')
+
