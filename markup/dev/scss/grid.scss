@@ -38,6 +38,8 @@ body{
     min-height:100%;
     position: relative;
 
+    @include clearfix();
+
     >*:nth-last-child(2){
         padding-bottom: 340px;
 
