@@ -1,0 +1,30 @@
+.page--udm{
+    background: url('../img/udm.png') no-repeat;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    background-position: center 40px;
+
+    @include adaptive(md){
+        background-position: center 100px;
+    }
+
+
+    h1{
+        margin-bottom: 100px;
+
+        @include adaptive(md){
+            margin-bottom: 200px;
+        }
+
+        @include adaptive(big){
+            margin-bottom: 300px;
+        }
+    }
+
+
+    .page__accent{
+        @extend .text-subtitle;
+    }
+
+
+}

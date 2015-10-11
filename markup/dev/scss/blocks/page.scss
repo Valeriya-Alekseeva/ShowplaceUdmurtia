@@ -1,0 +1,48 @@
+.page{
+    max-width: $width--wrapper;
+    margin: 0 30px;
+
+    >*:last-child{
+        margin-bottom: 50px;
+
+        //@include adaptive(sm){
+        //    margin-bottom: 100px;
+        //}
+    }
+
+    @include adaptive(mobile){
+        margin: 0 40px;
+    }
+
+    @include adaptive(sm){
+        margin: 0 130px;
+    }
+    @include adaptive(big){
+        margin: 0 auto;
+    }
+
+    &__content{
+        width: 100%;
+        max-width: $width--inner;
+        margin: 0 auto;
+        text-align: center;
+        @include clearfix();
+    }
+
+    h1{
+        @extend .text-title;
+    }
+
+    h2{
+        @extend .text-subtitle;
+    }
+    h3{
+        @extend .text-paragraph-title;
+    }
+    p{
+        @extend .text-paragraph;
+    }
+    a{
+        @extend .text-link;
+    }
+}

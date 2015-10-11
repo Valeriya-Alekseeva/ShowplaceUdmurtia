@@ -1,3 +1,44 @@
-extends ./../layouts/layout
+extends ./../layouts/layout-index
 block content
-    h1 new awesome shiny page
+    div#main-page-cover.cover
+        h1.cover__title
+            |леса, поля и реки, кумышка, перепечи, человеки
+        div.cover__image-block
+            img.cover__image.cover__image--mobile(src="img/cover/cover-mobile.png" title="Удмуртия")
+            //img.cover__image.cover__image--primary(src="img/cover/cover-title.png" title="Удмуртия")
+            //img.cover__image.cover__image--one.cover__image--tol-babai(src="img/cover/tol-babai.png" title="Тол Бабай")
+            //img.cover__image.cover__image--one.cover__image--mermaid(src="img/cover/mermaid.png" title="Русалка")
+            //img.cover__image.cover__image--two(src="img/cover/grandma.png" title="Бурановские бабушки")
+            //img.cover__image.cover__image--two(src="img/cover/artist.png" title="Чайковский")
+            //img.cover__image.cover__image--three(src="img/cover/elk.png" title="Лось")
+            //img.cover__image.cover__image--three(src="img/cover/gusli.png" title="Гусли")
+            //img.cover__image.cover__image--four(src="img/cover/flower.png" title="Италмас")
+            //img.cover__image.cover__image--four(src="img/cover/fork.png" title="Памятник пельменю")
+        include ../includes/social-buttons
+    div#main-menu-js.main-menu__container
+        ul.main-menu__list
+            li.main-menu__item
+                a.main-menu__link(href="#")
+                    |Удмуртия
+                p.main-menu__desc
+                    |На&nbsp;самом-то деле вся планета Земля&nbsp;— это Удмуртия и&nbsp;Неудмуртии..
+            li.main-menu__item
+                a.main-menu__link(href="#")
+                    |Карта
+                p.main-menu__desc
+                    |На&nbsp;самом-то деле вся планета Земля&nbsp;— это Удмуртия и&nbsp;Неудмуртии..
+            li.main-menu__item
+                a.main-menu__link(href="#")
+                    |Наше всё
+                p.main-menu__desc
+                    |На&nbsp;самом-то деле вся планета Земля&nbsp;— это Удмуртия и&nbsp;Неудмуртии..
+            li.main-menu__item
+                a.main-menu__link(href="#")
+                    |Фотогалерея
+                p.main-menu__desc
+                    |На&nbsp;самом-то деле вся планета Земля&nbsp;— это Удмуртия и&nbsp;Неудмуртии..
+            li.main-menu__item
+                a.main-menu__link(href="#")
+                    |О проекте
+                p.main-menu__desc
+                    |На&nbsp;самом-то деле вся планета Земля&nbsp;— это Удмуртия и&nbsp;Неудмуртии..
