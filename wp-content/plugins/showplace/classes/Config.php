@@ -1,10 +1,10 @@
 <?php
 
-namespace Urbanabru;
+namespace Showplace;
 
 /**
  * Class Config
- * @package Urbanabru
+ * @package Showplace
  */
 class Config {
 

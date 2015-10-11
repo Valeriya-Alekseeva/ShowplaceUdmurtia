@@ -1,12 +1,12 @@
 <?php
 
-namespace Urbanabru;
+namespace Showplace;
 
-use Urbanabru\Config;
+use Showplace\Config;
 
 /**
  * Class ContentHelper
- * @package Urbanabru
+ * @package Showplace
  */
 class ContentHelper {
 

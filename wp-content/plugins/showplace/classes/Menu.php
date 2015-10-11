@@ -1,10 +1,10 @@
 <?php
 
-namespace Urbanabru;
+namespace Showplace;
 
 /**
  * Class Menu
- * @package Urbanabru
+ * @package Showplace
  */
 class Menu extends \Walker_Nav_Menu
 {

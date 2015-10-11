@@ -4,8 +4,8 @@
  */
 get_header();
 
-use Urbanabru\Config;
-use Urbanabru\ContentHelper;
+use Showplace\Config;
+use Showplace\ContentHelper;
 
 $contentHelper = new ContentHelper();
 
