@@ -2,10 +2,19 @@
 
     .test-form{
 
+        &.hide{
+            display: none;
+        }
+
         &__section{
+            display: none;
             border: none;
             margin: 0;
             padding: 0;
+
+            &.active{
+                display: block;
+            }
         }
 
         &__question{
@@ -113,6 +122,14 @@
 
             }
 
+        }
+    }
+
+    .test-result{
+        display: none;
+
+        &.active{
+            display: block;
         }
     }
 }

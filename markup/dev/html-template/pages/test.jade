@@ -4,8 +4,8 @@ block content
         div.page__content
             h1
                 |Тест
-            form.test-form
-                fieldset.test-form__section
+            form.test-form.test-form-js
+                fieldset.test-form__section.test-section-js.active(data-section = 'question1')
                     h2.test-form__question
                         |Лопшо Педунь - это
                     ul.test-form__answer-list
@@ -24,10 +24,10 @@ block content
                             label.test-form__radio-label(for="test-q1a3")
                             p.test-form__radio-text
                                 |удмуртский суп с лапшой
-                    button.test-form__next(type="button")
+                    button.test-form__next.test-next-js(type="button" data-section = 'question2')
                         |Следующий вопрос
 
-                fieldset.test-form__section
+                fieldset.test-form__section.test-section-js(data-section = 'question2')
                     h2.test-form__question
                         |Пельмень в переводе с удмуртского
                     ul.test-form__answer-list
@@ -46,10 +46,10 @@ block content
                             label.test-form__radio-label(for="test-q2a3")
                             p.test-form__radio-text
                                 |сам все съем
-                    button.test-form__next(type="button")
+                    button.test-form__next.test-next-js(type="button" data-section = 'question3')
                         |Следующий вопрос
 
-                fieldset.test-form__section
+                fieldset.test-form__section.test-section-js(data-section = 'question3')
                     h2.test-form__question
                         |Что сделал П.И. Чайковский в Удмуртии?
                     ul.test-form__answer-list
@@ -68,10 +68,10 @@ block content
                             label.test-form__radio-label(for="test-q3a3")
                             p.test-form__radio-text
                                 |женился
-                    button.test-form__next(type="button")
+                    button.test-form__next.test-next-js(type="button" data-section = 'question4')
                         |Следующий вопрос
 
-                fieldset.test-form__section
+                fieldset.test-form__section.test-section-js(data-section = 'question4')
                     h2.test-form__question
                         |Общественный транспорт (трамвай, троллейбус, автобус) маршрута №1:
                     ul.test-form__answer-list
@@ -90,10 +90,10 @@ block content
                             label.test-form__radio-label(for="test-q4a3")
                             p.test-form__radio-text
                                 |Пе́рвый
-                    button.test-form__next(type="button")
+                    button.test-form__next.test-next-js(type="button" data-section = 'question5')
                         |Следующий вопрос
 
-                fieldset.test-form__section
+                fieldset.test-form__section.test-section-js(data-section = 'question5')
                     h2.test-form__question
                         |Монумент на берегу Ижевского пруда народ называет:
                     ul.test-form__answer-list
@@ -112,10 +112,10 @@ block content
                             label.test-form__radio-label(for="test-q5a3")
                             p.test-form__radio-text
                                 |Столбы́
-                    button.test-form__next(type="button")
+                    button.test-form__next.test-next-js(type="button" data-section = 'question6')
                         |Следующий вопрос
 
-                fieldset.test-form__section
+                fieldset.test-form__section.test-section-js(data-section = 'question6')
                     h2.test-form__question
                         |Дорога в Можгу, Сарапул, Як-Бодью, Шабердино, Гольяны, Бри:
                     ul.test-form__answer-list
@@ -134,10 +134,10 @@ block content
                             label.test-form__radio-label(for="test-q6a3")
                             p.test-form__radio-text
                                 |Шоссе́
-                    button.test-form__next(type="button")
+                    button.test-form__next.test-next-js(type="button" data-section = 'question7')
                         |Следующий вопрос
 
-                fieldset.test-form__section
+                fieldset.test-form__section.test-section-js(data-section = 'question7')
                     h2.test-form__question
                         |Выражение согласия:
                     ul.test-form__answer-list
@@ -156,6 +156,12 @@ block content
                             label.test-form__radio-label(for="test-q7a3")
                             p.test-form__radio-text
                                 |Ага!
-                    button.test-form__next(type="submit")
+                    button.test-form__next.test-end-js(type="submit")
                         |Закончить тест
+
+            div.test-result.test-result-js
+                h2.test-result__title
+                    |Ай, да молодец!
+                p.test-result__text
+                    |Подглядывать в исходники плохо.
 
