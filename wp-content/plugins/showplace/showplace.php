@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Плагин для Urbanab.ru
+ * Plugin Name: Плагин для udmurtia.kicasso.com
  * Description: Плагин содержит функции для вывода контента на страницы
  */
 

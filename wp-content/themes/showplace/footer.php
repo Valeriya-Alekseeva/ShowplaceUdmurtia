@@ -1,5 +1,5 @@
 <?php
-use Urbanabru\Config;
+use Showplace\Config;
 $pathToResource = home_url() . Config::DEFAULT_TEMPLATE_PATH;?>
 		<footer class="footer">
 			<div class="container">
