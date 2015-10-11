@@ -35,17 +35,20 @@ body{
 
 .general-container{
     width: 100%;
-    min-height:100%;
+    min-height: 100%;
     position: relative;
 
     @include clearfix();
 
-    >*:nth-last-child(2){
-        padding-bottom: 340px;
+    &--content{
 
-        @include adaptive(sm){
-            padding-bottom: 400px;
+        >*:nth-last-child(2){
+            padding-bottom: 340px;
+
+            @include adaptive(sm){
+                padding-bottom: 400px;
+            }
         }
-
     }
+
 }

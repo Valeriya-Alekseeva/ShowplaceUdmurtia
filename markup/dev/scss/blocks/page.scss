@@ -26,6 +26,7 @@
         max-width: $width--inner;
         margin: 0 auto;
         text-align: center;
+        overflow: hidden;
         @include clearfix();
     }
 

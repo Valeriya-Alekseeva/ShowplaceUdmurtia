@@ -1,0 +1,118 @@
+.page--test{
+
+    .test-form{
+
+        &__section{
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        &__question{
+            margin-bottom: 40px;
+
+            @include  adaptive(sm){
+                margin-bottom: 100px;
+            }
+        }
+
+        &__radio{
+            display: none;
+            &:checked+.test-form__radio-label:before{
+                display: block;
+            }
+        }
+
+        &__radio-label{
+            display: block;
+            position: relative;
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 10px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            border: 5px solid $color--primary;
+            cursor: pointer;
+
+            &:before{
+                content: '';
+                display: none;
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                border-radius: 50%;
+                background: $color--primary;
+            }
+
+            @include adaptive(sm){
+                margin-bottom: 40px;
+            }
+        }
+
+        &__radio-text{
+            font-size: 18px;
+
+            @include adaptive(sm){
+                font-size: 20px;
+            }
+        }
+
+        &__answer-list{
+            display: block;
+            width: 100%;
+            @include clearfix();
+
+            @include adaptive(sm){
+                margin-bottom: 50px;
+            }
+        }
+        &__answer-item{
+            width: 100%;
+            margin-bottom: 30px;
+
+            @include adaptive(sm){
+                width: 33.333%;
+                float: left;
+                text-align: center;
+                box-sizing: border-box;
+                padding: 0 10px;
+            }
+
+            @include adaptive(md){
+
+            }
+
+        }
+
+        &__next{
+            display: block;
+            width: 100%;
+            max-width: 380px;
+            height: 60px;
+            margin: 0 auto;
+            border-radius: 6px;
+            background: $color--primary;
+            color: $color--text-light;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+
+            @include adaptive(sm){
+                height: 70px;
+                font-size: 30px;
+            }
+
+            .desktop &{
+                transition: opacity .5s;
+                &:hover{
+                    opacity: 0.5;
+                }
+
+            }
+
+        }
+    }
+}

@@ -1,8 +1,161 @@
 extends ./../layouts/layout-index
 block content
-    div.page.page--about
+    div.page.page--test
         div.page__content
             h1
                 |Тест
+            form.test-form
+                fieldset.test-form__section
+                    h2.test-form__question
+                        |Лопшо Педунь - это
+                    ul.test-form__answer-list
+                        li.test-form__answer-item
+                            input.test-form__radio(type='radio' name="question1" value="1" id="test-q1a1")
+                            label.test-form__radio-label(for="test-q1a1")
+                            p.test-form__radio-text
+                                |удмуртский Ходжа Насреддин
+                        li.test-form__answer-item
+                            input.test-form__radio(type='radio' name="question1" value="2" id="test-q1a2")
+                            label.test-form__radio-label(for="test-q1a2")
+                            p.test-form__radio-text
+                                |удмуртский Иванушка-дурачок
+                        li.test-form__answer-item
+                            input.test-form__radio(type='radio' name="question1" value="3" id="test-q1a3")
+                            label.test-form__radio-label(for="test-q1a3")
+                            p.test-form__radio-text
+                                |удмуртский суп с лапшой
+                    button.test-form__next(type="button")
+                        |Следующий вопрос
 
+                fieldset.test-form__section
+                    h2.test-form__question
+                        |Пельмень в переводе с удмуртского
+                    ul.test-form__answer-list
+                        li.test-form__answer-item
+                            input.test-form__radio(type='radio' name="question2" value="1" id="test-q2a1")
+                            label.test-form__radio-label(for="test-q2a1")
+                            p.test-form__radio-text
+                                |хлебное ухо
+                        li.test-form__answer-item
+                            input.test-form__radio(type='radio' name="question2" value="2" id="test-q2a2")
+                            label.test-form__radio-label(for="test-q2a2")
+                            p.test-form__radio-text
+                                |хлебное брюхо
+                        li.test-form__answer-item
+                            input.test-form__radio(type='radio' name="question2" value="3" id="test-q2a3")
+                            label.test-form__radio-label(for="test-q2a3")
+                            p.test-form__radio-text
+                                |сам все съем
+                    button.test-form__next(type="button")
+                        |Следующий вопрос
+
+                fieldset.test-form__section
+                    h2.test-form__question
+                        |Что сделал П.И. Чайковский в Удмуртии?
+                    ul.test-form__answer-list
+                        li.test-form__answer-item
+                            input.test-form__radio(type='radio' name="question3" value="1" id="test-q3a1")
+                            label.test-form__radio-label(for="test-q3a1")
+                            p.test-form__radio-text
+                                | родился
+                        li.test-form__answer-item
+                            input.test-form__radio(type='radio' name="question3" value="2" id="test-q3a2")
+                            label.test-form__radio-label(for="test-q3a2")
+                            p.test-form__radio-text
+                                | учился
+                        li.test-form__answer-item
+                            input.test-form__radio(type='radio' name="question3" value="3" id="test-q3a3")
+                            label.test-form__radio-label(for="test-q3a3")
+                            p.test-form__radio-text
+                                |женился
+                    button.test-form__next(type="button")
+                        |Следующий вопрос
+
+                fieldset.test-form__section
+                    h2.test-form__question
+                        |Общественный транспорт (трамвай, троллейбус, автобус) маршрута №1:
+                    ul.test-form__answer-list
+                        li.test-form__answer-item
+                            input.test-form__radio(type='radio' name="question4" value="1" id="test-q4a1")
+                            label.test-form__radio-label(for="test-q4a1")
+                            p.test-form__radio-text
+                                |Однёрка
+                        li.test-form__answer-item
+                            input.test-form__radio(type='radio' name="question4" value="2" id="test-q4a2")
+                            label.test-form__radio-label(for="test-q4a2")
+                            p.test-form__radio-text
+                                |Едини́ца
+                        li.test-form__answer-item
+                            input.test-form__radio(type='radio' name="question4" value="3" id="test-q4a3")
+                            label.test-form__radio-label(for="test-q4a3")
+                            p.test-form__radio-text
+                                |Пе́рвый
+                    button.test-form__next(type="button")
+                        |Следующий вопрос
+
+                fieldset.test-form__section
+                    h2.test-form__question
+                        |Монумент на берегу Ижевского пруда народ называет:
+                    ul.test-form__answer-list
+                        li.test-form__answer-item
+                            input.test-form__radio(type='radio' name="question5" value="1" id="test-q5a1")
+                            label.test-form__radio-label(for="test-q5a1")
+                            p.test-form__radio-text
+                                |Памятник Победы
+                        li.test-form__answer-item
+                            input.test-form__radio(type='radio' name="question5" value="2" id="test-q5a2")
+                            label.test-form__radio-label(for="test-q5a2")
+                            p.test-form__radio-text
+                                |Лыжи Кулако́вой
+                        li.test-form__answer-item
+                            input.test-form__radio(type='radio' name="question5" value="3" id="test-q5a3")
+                            label.test-form__radio-label(for="test-q5a3")
+                            p.test-form__radio-text
+                                |Столбы́
+                    button.test-form__next(type="button")
+                        |Следующий вопрос
+
+                fieldset.test-form__section
+                    h2.test-form__question
+                        |Дорога в Можгу, Сарапул, Як-Бодью, Шабердино, Гольяны, Бри:
+                    ul.test-form__answer-list
+                        li.test-form__answer-item
+                            input.test-form__radio(type='radio' name="question6" value="1" id="test-q6a1")
+                            label.test-form__radio-label(for="test-q6a1")
+                            p.test-form__radio-text
+                                |Автоба́н
+                        li.test-form__answer-item
+                            input.test-form__radio(type='radio' name="question6" value="2" id="test-q6a2")
+                            label.test-form__radio-label(for="test-q6a2")
+                            p.test-form__radio-text
+                                |Тракт
+                        li.test-form__answer-item
+                            input.test-form__radio(type='radio' name="question6" value="3" id="test-q6a3")
+                            label.test-form__radio-label(for="test-q6a3")
+                            p.test-form__radio-text
+                                |Шоссе́
+                    button.test-form__next(type="button")
+                        |Следующий вопрос
+
+                fieldset.test-form__section
+                    h2.test-form__question
+                        |Выражение согласия:
+                    ul.test-form__answer-list
+                        li.test-form__answer-item
+                            input.test-form__radio(type='radio' name="question7" value="1" id="test-q7a1")
+                            label.test-form__radio-label(for="test-q7a1")
+                            p.test-form__radio-text
+                                |Да!
+                        li.test-form__answer-item
+                            input.test-form__radio(type='radio' name="question7" value="2" id="test-q7a2")
+                            label.test-form__radio-label(for="test-q7a2")
+                            p.test-form__radio-text
+                                |Дак да!
+                        li.test-form__answer-item
+                            input.test-form__radio(type='radio' name="question7" value="3" id="test-q7a3")
+                            label.test-form__radio-label(for="test-q7a3")
+                            p.test-form__radio-text
+                                |Ага!
+                    button.test-form__next(type="submit")
+                        |Закончить тест
 

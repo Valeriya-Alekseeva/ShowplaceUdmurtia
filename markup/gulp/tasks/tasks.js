@@ -24,7 +24,7 @@ gulp.task('assets', function(){
             config.backendResourcesPath + '/svg',
             config.backendResourcesPath + '/js',
             config.backendResourcesPath + '/css',
-            config.backendResourcesPath + '/markup'
+            config.backendResourcesPath + '/markup' // удалить, когда у Леры будет собираться проект
         ],
         {
             force: true
@@ -43,8 +43,8 @@ gulp.task('assets', function(){
             gulp.src(config.dest + '/css/**/*')
                 .pipe(gulp.dest(config.backendResourcesPath + '/css'));
 
-            gulp.src(config.dest + '/*.html')
-                .pipe(gulp.dest(config.backendResourcesPath + '/markup'));
+            gulp.src(config.dest + '/*.html')                               // удалить, когда у Леры будет собираться проект
+                .pipe(gulp.dest(config.backendResourcesPath + '/markup'));  //
         }
     );
 });
