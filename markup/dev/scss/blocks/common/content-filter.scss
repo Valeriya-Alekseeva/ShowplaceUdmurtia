@@ -1,3 +1,115 @@
 .content-filter{
+    &__menu-block{
+        width: 100%;
+        position: relative;
+    }
+    &__menu-title{
+        width: 100%;
+        height: 40px;
+        padding: 8px 20px;
+        box-sizing: border-box;
+        border: 2px solid rgba(75,28,4,0.7);
+        border-radius: 4px;
+        text-align: left;
+        font-size: 16px;
+        font-weight: 700;
+        position: relative;
+        z-index: 2;
+
+        .button-down{
+            float: right;
+        }
+
+        @include adaptive(sm){
+            display: none;
+        }
+    }
+
+    &__title-text{
+        display: block;
+        margin-right: 40px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__menu{
+        display: none;
+        width: 100%;
+        box-sizing: border-box;
+        border: 2px solid rgba(75,28,4,0.7);
+        border-top: none;
+        -webkit-border-radius: 0 0 4px 4px;
+        -moz-border-radius: 0 0 4px 4px;
+        border-radius: 0 0 4px 4px;
+        position: absolute;
+        top: 38px;
+        background: url("../img/bg-pattern.jpg") repeat;
+        z-index: 1;
+
+        &.show{
+            display: block;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        @include adaptive(sm){
+            display: block;
+            position: static;
+            border: none;
+        }
+
+
+        &-item{
+            display: block;
+            width: 100%;
+            height: 40px;
+            box-sizing: border-box;
+            padding: 10px 20px;
+            
+            @include adaptive(sm){
+                display: inline-block;
+                width: auto;
+            }
+        }
+        &-link{
+            display: block;
+            width: 100%;
+            font-weight: 400;
+            text-align: center;
+            text-decoration: none;
+
+            @include adaptive(sm){
+                font-weight: 700;
+                font-size: 20px;
+                
+                &.active{
+                    font-size: 30px;
+                    .content-filter__menu-text{
+                        border-bottom: none;
+                    }
+                }
+
+                .desktop &{
+                    &:hover{
+                        .content-filter__menu-text{
+                            border-bottom-color: rgba(0,0,0,0);
+                        }
+                    }
+
+                }
+
+            }
+        }
+        &-text{
+            border-bottom: 1px dashed $color--primary;
+        }
+
+    }
+
+
+    
+
 
 }
