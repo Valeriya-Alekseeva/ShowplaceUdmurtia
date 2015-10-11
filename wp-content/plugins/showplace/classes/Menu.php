@@ -35,7 +35,7 @@ class Menu extends \Walker_Nav_Menu
 		} else {
 			$attributes = ! empty($item->attr_title) ? ' title="' . esc_attr($item->attr_title) . '"' : '';
 			$attributes .= ! empty($item->url) ? ' href="' . esc_attr($item->url) .'"' : '';
-			$attributes .= ' class="header-nav__link"';
+			$attributes .= ' class="main-menu__link"';
 
 			$itemOutput = sprintf(
 				'%1$s<a%2$s>%3$s%4$s%5$s</a>%6$s',
