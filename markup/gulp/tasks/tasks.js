@@ -23,8 +23,12 @@ gulp.task('assets', function(){
             config.backendResourcesPath + '/img',
             config.backendResourcesPath + '/svg',
             config.backendResourcesPath + '/js',
-            config.backendResourcesPath + '/css'
+            config.backendResourcesPath + '/css',
+            config.backendResourcesPath + '/markup'
         ],
+        {
+            force: true
+        },
         function(){
 
             gulp.src(config.dest + '/svg/**/*')
@@ -38,6 +42,9 @@ gulp.task('assets', function(){
 
             gulp.src(config.dest + '/css/**/*')
                 .pipe(gulp.dest(config.backendResourcesPath + '/css'));
+
+            gulp.src(config.dest + '/*.html')
+                .pipe(gulp.dest(config.backendResourcesPath + '/markup'));
         }
     );
 });
