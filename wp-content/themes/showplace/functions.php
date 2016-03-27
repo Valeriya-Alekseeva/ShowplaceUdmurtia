@@ -1,9 +1,12 @@
 <?php
+if (function_exists('add_theme_support')) {
+	add_theme_support('menus');
+}
 /**
  * Событие вызываемое при сохранении / изменении поста
  * @param $postId
  */
-function onSavePost($postId) {
+/*function onSavePost($postId) {
 	$fields = get_field_objects($postId);
 	if (isset($fields['detail_image']) && isset($fields['detail_image']['key']) && ! empty($fields['detail_image']['key']) &&
 		isset($fields['preview_image']) && isset($fields['preview_image']['key']) && ! empty($fields['preview_image']['key']) &&
@@ -27,4 +30,4 @@ function onSavePost($postId) {
 	}
 	//var_dump($postId, $fields, $_POST); die;
 }
-add_action('save_post', 'onSavePost');
+add_action('save_post', 'onSavePost');*/
