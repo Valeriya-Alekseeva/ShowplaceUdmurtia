@@ -28,7 +28,7 @@ class Menu extends \Walker_Nav_Menu
 				$args->before,
 				$attributes,
 				$args->link_before,
-				apply_filters( 'the_title', $item->title, $item->ID ),
+				apply_filters('the_title', $item->title, $item->ID),
 				$args->link_after,
 				$args->after
 			);

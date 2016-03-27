@@ -2,6 +2,7 @@
 use Showplace\Config;
 
 $pathToResource = home_url() . Config::DEFAULT_TEMPLATE_PATH;
+global $post;
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,7 +21,6 @@ $pathToResource = home_url() . Config::DEFAULT_TEMPLATE_PATH;
 	<meta property="og:image" content="<?= $pathToResource ?>img/ogimage200.png">
 	<meta property="og:site_name" content="<?= get_bloginfo('name'); ?>">
 	<meta name="twitter:card" content="summary" />
-	<meta name="twitter:site" content="@Urbanab_ru" />
 	<meta name="twitter:title" content="<?= $titlePage; ?><?= bloginfo('name') ?>" />
 	<meta name="twitter:image" content="<?= $pathToResource ?>img/ogimage200.png" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,6 +56,15 @@ $pathToResource = home_url() . Config::DEFAULT_TEMPLATE_PATH;
 	));?>
 	<div class="scroll-container">
 		<div class="general-container">
-			<div class="page page--about">
+			<div class="page <?php
+				if (is_page('about')){
+					echo 'page--about';
+				} elseif (is_page('udmurtia')){
+					echo 'page--udm';
+				} elseif (is_page('landmarks')){
+					echo 'page--our-all';
+				} elseif (is_page('test')){
+					echo 'page--test';
+				}?>">
 				<div class="page__content">
-					<h1>О проекте</h1>
+					<h1><?= (is_404()) ? '404 страница не найдена' : $post->post_title; ?></h1>
