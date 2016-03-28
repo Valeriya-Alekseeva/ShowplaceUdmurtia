@@ -25,7 +25,7 @@ global $post;
 	<meta name="twitter:image" content="<?= $pathToResource ?>img/ogimage200.png" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="<?= $pathToResource ?>css/style.css">
-	<script src="svg/js-sprite.js"></script>
+	<script src="<?= $pathToResource ?>svg/js-sprite.js"></script>
 </head>
 <body>
 	<!-- include svg sprite-->
