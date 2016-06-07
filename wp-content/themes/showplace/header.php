@@ -1,32 +1,4 @@
-<?php
-use Showplace\Config;
-
-$pathToResource = home_url() . Config::DEFAULT_TEMPLATE_PATH;
-global $post;
-?>
-<!DOCTYPE html>
-<html>
-<head lang="ru">
-	<meta charset="UTF-8">
-	<title><?= bloginfo('name') ?></title>
-	<meta name="robots" content="index, follow" />
-	<meta name="keywords" content="Достопримечательности Удмуртии, примечательности Удмуртии, памятники, история, attractions Udmurtia" />
-	<meta name="robots" content="index, follow" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:url" content="<?= (home_url() . $_SERVER['REQUEST_URI']) ?>">
-	<meta property="og:title" content="<?= $titlePage; ?><?= bloginfo('name') ?>"/>
-	<meta property="og:type" content="website">
-	<meta name="description" content="<?= bloginfo('description'); ?>" />
-	<meta property="og:description" content="<?= bloginfo('description'); ?>">
-	<meta property="og:image" content="<?= $pathToResource ?>img/ogimage200.png">
-	<meta property="og:site_name" content="<?= get_bloginfo('name'); ?>">
-	<meta name="twitter:card" content="summary" />
-	<meta name="twitter:title" content="<?= $titlePage; ?><?= bloginfo('name') ?>" />
-	<meta name="twitter:image" content="<?= $pathToResource ?>img/ogimage200.png" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="<?= $pathToResource ?>css/style.css">
-	<script src="<?= $pathToResource ?>svg/js-sprite.js"></script>
-</head>
+<?php get_template_part('head'); ?>
 <body>
 	<!-- include svg sprite-->
 	<div id="svg-icon-placeholder"></div>
@@ -47,7 +19,7 @@ global $post;
 		'echo' => true,
 		'fallback_cb' => 'wp_page_menu',
 		'before' => '',
-		'after' => '',
+		'after' => '<p class="main-menu__desc">%s</p>',
 		'link_before' => '',
 		'link_after' => '',
 		'items_wrap' => '<div id="main-menu-js" class="main-menu__container"><ul class="main-menu__list">%3$s</ul></div>',
@@ -55,7 +27,7 @@ global $post;
 		'walker' => new \Showplace\Menu()
 	));?>
 	<div class="scroll-container">
-		<div class="general-container">
+		<div class="general-container general-container--content">
 			<div class="page <?php
 				if (is_page('about')){
 					echo 'page--about';
@@ -67,4 +39,10 @@ global $post;
 					echo 'page--test';
 				}?>">
 				<div class="page__content">
-					<h1><?= (is_404()) ? '404 страница не найдена' : $post->post_title; ?></h1>
+					<h1><?php
+						if (is_404()) {
+							echo ($_COOKIE['qtrans_front_language'] == 'en') ? '404 Page Not Found' : '404 страница не найдена';
+						} else {
+							echo $post->post_title;
+						}?>
+					</h1>
